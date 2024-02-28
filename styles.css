@@ -270,7 +270,6 @@ a .logobendera{
 }
 
 #join .join-container .join-txt{
-    border: 5px solid black;
     max-width: 500px;
     justify-content: center;
     align-items: center;
@@ -298,11 +297,6 @@ a .logobendera{
     transform: translateY(-3px);
 }
 
-
-
-#join .join-container .join-img{
-    border: 5px solid black;
-}
 #join .join-container .join-img img{
     max-width: 500px;
 }
