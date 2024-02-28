@@ -34,6 +34,7 @@ p {
 
 body{
     width: 100%;
+    overflow-x: hidden;
 }
 
 /* Navbar */
@@ -256,6 +257,66 @@ a .logobendera{
     background-color: white;
 }
 
+/* career */
+
+#join .join-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 100px;
+    background:linear-gradient(180deg, #73BF41, #EDF3A8);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#join .join-container .join-txt{
+    border: 5px solid black;
+    max-width: 500px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#join .join-container .join-txt h2{
+    /* align-items: center;
+    justify-content: center;
+    position: relative; */
+}
+
+#join .join-container .join-txt .job-btn{
+    max-width: 250px;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    border: solid 2px #73BF41;
+    font-size: 25px;
+    color: #73BF41;
+    padding: 0px 15px;
+    margin: 10px;
+    transition-duration: 0.4s;
+}
+
+#join .join-container .join-txt .job-btn:hover{
+    max-width: 250px;
+    background-color: #73BF41;
+    font-size: 25px;
+    color: whitesmoke;
+    transform: translateY(-3px);
+}
+
+
+
+#join .join-container .join-img{
+    border: 5px solid black;
+}
+#join .join-container .join-img img{
+    max-width: 500px;
+}
+
+#career-content{
+    display: flex;
+    background-color: #EDF3A8;
+    text-align: center;
+    padding: 0px 50px;
+}
 /* Specific styles for the about.html page */
 
 #about {
@@ -367,7 +428,7 @@ a .logobendera{
 }
 
 .job-container{
-    background:linear-gradient(-90deg, #73BF41, #EDF3A8);
+    background:linear-gradient(360deg, #73BF41, #EDF3A8);
     padding:15px 9%;
     padding-bottom: 100px;
 }
