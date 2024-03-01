@@ -294,7 +294,8 @@ a .logobendera{
     background-color: #73BF41;
     font-size: 25px;
     color: whitesmoke;
-    transform: translateY(-3px);
+    transform: scale(1.05);
+    letter-spacing: 0.1;
 }
 
 #join .join-container .join-img img{
@@ -367,7 +368,7 @@ a .logobendera{
 }
 
 
-.footer{
+/* .footer{
     background-color: #acff68;
     background-image: url(img/bg1.jpg);
     padding: 60px 13% 70px;
@@ -402,9 +403,10 @@ a .logobendera{
 .footer-content h5 a:hover{
     transform: translateY(-3px) translateX(3px);
     color: rgb(41, 41, 180);
-}
+} */
 
-.icons a{
+
+/* .icons a{
     display: inline-block;
     font-size: 22px;
     color: navy;
@@ -415,12 +417,131 @@ a .logobendera{
 .icons a:hover{
     color: rgb(41, 41, 180);
     transform: translateY(-3px);
+} */
+
+/* footer */
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 1;
+    background: linear-gradient(360deg, #73BF41, #EDF3A8);
+    color: #fff;
+    padding: 50px 0 30px;
+    border-top-left-radius: 105px ;
+    border-top-right-radius: 105px;
+    font-size: 13px;
+    line-height: 20px;
+    /* border: 2px solid black; */
+    box-shadow: 0px 5px 6px rgba(242, 255, 168, 0.5) inset;
+}
+
+footer .row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+
+} 
+
+footer .row .footer-logo{
+    width: 250px;
+}
+
+footer .row .col p{
+    color: #fff;
+}
+
+footer .row .col ul li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+footer .row .col ul li a {
+    transition: transform 0.3s ease; /* Added transition property */
+    display: block; /* Added to make the entire link area clickable */
+}
+
+footer .row .col ul li a:hover {
+    transform: scale(1.05);
+    color: black;
+}
+
+footer .row .col ul .contactner{
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+footer .row .col ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+}
+
+footer .col{
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+footer .col h3{
+    width: fit-content;
+    margin-bottom: 20px;
+    position: relative;
+    font-size: 18px;
+}
+
+footer .col:nth-child(2), footer .col:nth-child(3){
+    flex-basis: 15%;
+}
+
+footer .row .col .icon-container{
+    display: flex;
+    flex-direction: row;
+}
+
+footer .row .col ul .icon-socmed i{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+    margin-right: 15px;
+    border-color: 10px solid black;
+    cursor: pointer;
+}
+
+footer .row .col ul .icon-socmed i:hover{
+    color: #73BF41;
+    background-color: #fff;
+    transition: 0.3s ease;
+    transform: scale(1.05);
+}
+
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
 }
 
 .job-container{
-    background:linear-gradient(360deg, #73BF41, #EDF3A8);
+    background:linear-gradient(360deg, #fff, #EDF3A8);
     padding:15px 9%;
     padding-bottom: 100px;
+}
+
+.copyright{
+    text-align: center;
+}
+
+.copyright p{
+    font-size: 15px;
+    color: #fff;
 }
 
 .job-container .heading{
