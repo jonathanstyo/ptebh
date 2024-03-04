@@ -78,6 +78,7 @@ body{
 
 a .logobendera{
     max-width: 20px;
+    padding-top: 8px;
 }
 
 #navbar li a::before{
@@ -811,7 +812,7 @@ hr{
 }
 /* media query */
 
-@media screen and (max-width: 994px) {
+@media screen and (max-width: 1450px) {
     /* Adjust breakpoint as needed */
 
     #header {
