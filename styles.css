@@ -434,6 +434,50 @@ a .logobendera{
 left: 50%;
 } */
 
+/* core value */
+
+#value{
+    padding: 100px;
+}
+
+#value h2{
+    text-align: center;
+}
+
+.value-row{
+    display: flex;
+    flex-direction: column;
+    background-color: #73BF41;
+    opacity: 75%;
+    border-radius: 25px;
+    box-shadow: 0 10px 10px rgba(0,0,0,.5);
+    padding: 50px;
+}
+
+#value .value-col{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+
+.value-anagram{
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    justify-content: center;
+    padding-top: 20px;
+    background-color: #F9F6EE;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.value-txt{
+    background-color: #F9F6EE;
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
 /* timeline */
 
 #timeline-section {
