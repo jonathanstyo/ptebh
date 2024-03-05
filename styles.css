@@ -52,6 +52,8 @@ body{
     position: sticky;
     top: 0;
     left: 0;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 #navbar {
@@ -124,6 +126,81 @@ a .logobendera{
 .toggle-btn:hover i {
     color: #555; /* Adjust hover color as needed */
 }
+
+/* popup */
+/* Modal Popup Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    overflow: hidden;
+    backdrop-filter: blur(5px); /* Background blur effect */
+}
+
+.modal.show {
+    display: block; /* Show the modal */
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%; /* Change max-width to fit content */
+    width: auto;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content img{
+    max-width: 100%;
+    height: auto;
+}
+
+.close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    cursor: pointer;
+    width: 40px; /* Set width of the close button */
+    height: 40px; /* Set height of the close button */
+    border: 1px solid #777; /* Add black border */
+    border-radius: 50%; /* Make it round */
+    background-color: white; /* Set background color to white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px; /* Increase font size */
+}
+
+/* Disable scrolling when modal is open */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* CSS for mobile devices */
+@media only screen and (max-width: 600px) {
+    .modal-content img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Change the image source for mobile devices */
+    .modal-content img {
+        content: url('img/PERHATIAN.png');
+    }
+}
+
+
+/* hero, about page */
 
 #hero {
     background-image: url("img/bg1.jpg");
@@ -238,26 +315,6 @@ a .logobendera{
     transform: translateX(0);
 }
 
-.content-1 {
-    background-image: url(img/bg4.png);
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 50px 0;
-}
-
-.content-1 h2{
-    color: blue;
-    height: 100vh;
-    width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 50px;
-}
-
-.content-1 p{
-    background-color: white;
-}
 
 /* career */
 
@@ -266,7 +323,7 @@ a .logobendera{
     flex-direction: row;
     flex-wrap: wrap;
     padding: 100px;
-    background:linear-gradient(180deg, #F9F6EE, #EDF3A8);
+    background:linear-gradient(180deg, #73BF41, #F9F6EE);
     justify-content: space-evenly;
     align-items: center;
 }
@@ -307,7 +364,7 @@ a .logobendera{
 
 #career-content{
     display: flex;
-    background-color: #EDF3A8;
+    background-color: #F9F6EE;
     text-align: center;
     padding: 0px 50px;
 }
@@ -587,6 +644,47 @@ left: 50%;
     }
 }
 
+/* CSS for map section */
+#map{
+    margin: 0 100px 100px 100px;
+    padding: 30px;
+}
+
+#map h2{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#map .map-ctn{
+    display: flex;
+    justify-content: space-evenly; /* Distribute items evenly along the main axis */
+    align-items: center; /* Center items along the cross axis */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+}
+
+/* CSS for each map container */
+.map-ho,
+.map-site {
+    flex: 1; /* Grow to take up equal space */
+    margin: 10px; /* Add spacing between maps */
+}
+
+/* CSS for embedded maps */
+.map-ho iframe,
+.map-site iframe {
+    width: 100%; /* Take up 100% width of their parent container */
+    height: 450px; /* Set a fixed height */
+    border: 1px solid black;
+    border-radius: 25px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.3);
+
+}
+
+.map-ho h3, 
+.map-site h3{
+    text-align: center;
+    margin-bottom: 20px;
+}
 
 #goals{
     background-color: #F9F6EE;
@@ -718,6 +816,7 @@ footer .row .col ul .icon-socmed i:hover{
     background-color: #fff;
     transition: 0.3s ease;
     transform: scale(1.05);
+    cursor: pointer;
 }
 
 hr{
@@ -737,7 +836,7 @@ hr{
 }
 
 .job-container{
-    background:linear-gradient(360deg, #F9F6EE, #EDF3A8);
+    background:linear-gradient(360deg,#F9F6EE, #73BF41, #F9F6EE);
     padding:15px 9%;
     padding-bottom: 100px;
 }
@@ -745,7 +844,7 @@ hr{
 .job-container .heading{
     text-align: center;
     padding-bottom: 15px;
-    color:#fff;
+    color:black;
     text-shadow: 0 5px 10px rgba(0,0,0,.2);
     font-size: 50px;
 }
