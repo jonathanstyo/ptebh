@@ -52,8 +52,6 @@ body{
     position: sticky;
     top: 0;
     left: 0;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
 }
 
 #navbar {
@@ -376,7 +374,7 @@ body.modal-open {
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 50px;
+    padding: 50px 20px 50px 20px;
     /* background: linear-gradient(180deg, #73BF41, #EDF3A8); */
 }
 
@@ -448,6 +446,7 @@ body.modal-open {
 #abt-us .abt-ctn .abt-txt{
     color: #93C572;
     max-width: 750px;
+    letter-spacing: 3px;
 }
 
 #abt-us .abt-ctn .abt-img img{
@@ -659,22 +658,21 @@ left: 50%;
     display: flex;
     justify-content: space-evenly; /* Distribute items evenly along the main axis */
     align-items: center; /* Center items along the cross axis */
-    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    flex-wrap: wrap;
 }
 
 /* CSS for each map container */
 .map-ho,
 .map-site {
-    flex: 1; /* Grow to take up equal space */
-    margin: 10px; /* Add spacing between maps */
+    width: 600px;
+    margin-bottom: 20px;
 }
 
 /* CSS for embedded maps */
 .map-ho iframe,
 .map-site iframe {
-    width: 100%; /* Take up 100% width of their parent container */
-    height: 450px; /* Set a fixed height */
-    border: 1px solid black;
+    width: 100%;
+    height: 450px; 
     border-radius: 25px;
     box-shadow: 0 10px 15px rgba(0,0,0,.3);
 
@@ -694,18 +692,21 @@ left: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .visi{
     display: flex;
     justify-content: space-evenly;
     margin: 20px;
+    flex-wrap: wrap;
 }
 
 .misi{
     display: flex;
     justify-content: space-evenly;
     margin: 20px;
+    flex-wrap: wrap-reverse;
 }
 
 .garisvm {
@@ -715,6 +716,70 @@ left: 50%;
     margin-bottom: 20px;
     opacity: 30%;
 }
+
+/* gallery page */
+
+#gallery-hero {
+    background-image: url("img/bg3.png");
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#gallery-hero h2{
+    padding-bottom: 5px;
+    color: white;
+}
+
+#gallery-hero h1{
+    color: #ffffff;
+    font-size: 75px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#gallery-hero p{
+    color: white;
+}
+
+#gallery{
+    padding: 40px;
+}
+
+#gallery h2{
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.gallery-ctn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.gallery-ctn .gallery-content{
+    margin-right: 25px;
+}
+
+#gallery .gallery-ctn .gallery-content h4{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.gallery-ctn .gallery-content img{
+    max-width: 300px;
+    border-radius: 25px;
+    box-shadow: 0 10px 10px rgba(0,0,0,.5);
+    margin-bottom: 15px;
+}
+
+
 
 footer{
     width: 100%;
