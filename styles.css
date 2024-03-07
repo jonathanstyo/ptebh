@@ -504,16 +504,16 @@ left: 50%;
 .value-row{
     display: flex;
     flex-direction: column;
-    background-color: #73BF41;
+    /* background-color: #73BF41; */
     opacity: 75%;
     border-radius: 25px;
     box-shadow: 0 10px 10px rgba(0,0,0,.5);
-    padding: 50px;
+    padding: 50px 5px 50px 5px;
 }
 
 #value .value-col{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin: 10px;
     flex-wrap: wrap;
 }
@@ -523,17 +523,28 @@ left: 50%;
     height: 75px;
     text-align: center;
     justify-content: center;
-    padding-top: 20px;
-    background-color: #F9F6EE;
+    background-color: #73BF41;
     border-radius: 12px;
     margin-bottom: 10px;
 }
+
+.value-anagram h1{
+    color: #F9F6EE;
+    font-size: 60px;
+    width: 100%;
+    height: auto;
+}
+
 
 .value-txt{
     background-color: #F9F6EE;
     border-radius: 12px;
     padding: 10px;
     margin-bottom: 10px;
+}
+
+.value-txt p{
+    font-size: 15px;
 }
 /* timeline */
 
@@ -836,8 +847,33 @@ left: 50%;
     margin-bottom: 15px;
 }
 
+/* commitment page */
+#commitment{
+    padding: 20px 50px 20px 50px;
+}
+
+#commitment h2{
+    text-align: center;
+}
+
+#commitment .com-container{
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#commitment .com-container .com-ctn img{
+    background: black;
+    margin: 50px;
+}
+
+#commitment .com-container .com-ctn p{
+    margin: 50px;
+}
 
 
+/* footer */
 footer{
     width: 100%;
     position: absolute;
