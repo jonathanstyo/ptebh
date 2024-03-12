@@ -76,37 +76,41 @@ bullets.forEach((bullet, index) => {
 setInterval(nextSlide, 5000); // Change slide every 5 seconds
 
 // popup
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the close button
-var closeButton = document.querySelector(".close");
-
-// Show the modal
-modal.classList.add("show");
-document.body.classList.add("modal-open");
-
-// Close the modal and enable scrolling
-function closeModal() {
-    modal.classList.remove("show");
-    document.body.classList.remove("modal-open");
-}
-
-// Close the modal when clicking the close button
-closeButton.addEventListener("click", function() {
-    closeModal();
-});
-
-// Close the modal when clicking outside of it
-window.addEventListener("click", function(event) {
-    if (event.target === modal) {
-        closeModal();
-    }
-});
-
-// Enable scrolling when the modal is closed
-modal.addEventListener("transitionend", function() {
-    if (!modal.classList.contains("show")) {
+// popup
+(function() {
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the close button
+    var closeButton = document.querySelector(".close");
+    
+    // Show the modal
+    modal.classList.add("show");
+    document.body.classList.add("modal-open");
+    
+    // Close the modal and enable scrolling
+    function closeModal() {
+        modal.classList.remove("show");
         document.body.classList.remove("modal-open");
     }
-});
+    
+    // Close the modal when clicking the close button
+    closeButton.addEventListener("click", function() {
+        closeModal();
+    });
+    
+    // Close the modal when clicking outside of it
+    window.addEventListener("click", function(event) {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+    
+    // Enable scrolling when the modal is closed
+    modal.addEventListener("transitionend", function() {
+        if (!modal.classList.contains("show")) {
+            document.body.classList.remove("modal-open");
+        }
+    });
+})();
+
