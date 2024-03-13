@@ -812,11 +812,11 @@ body.modal-open {
     margin-bottom: 15px;
 }
 
+/* css for gallery image picker */
 ::selection {
     color: #fff;
     background: #73BF41;
 }
-
 
 .custom-wrapper {
     margin: 100px auto;
@@ -905,11 +905,11 @@ body.modal-open {
     background: #fff;
     max-width: 700px;
     width: 100%;
-    z-index: 5;
+    z-index: 999;
     opacity: 0;
     pointer-events: none;
     border-radius: 3px;
-    padding: 0 5px 5px 5px;
+    padding: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -918,6 +918,14 @@ body.modal-open {
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
     transition: all 0.3s ease;
+}
+
+.custom-desc {
+    max-width: calc(100% - 20px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: break-word;
 }
 
 .custom-preview-details {
@@ -950,7 +958,7 @@ body.modal-open {
 }
 
 .custom-close-icon:hover {
-    color: #7dff13; /* Change color on hover */
+    color: #7dff13;
 }
 
 .custom-fullscreen-preview-box .custom-image-box {
@@ -961,6 +969,26 @@ body.modal-open {
 .custom-image-box img {
     width: 100%;
     border-radius: 0 0 3px 3px;
+}
+
+.custom-fullscreen-preview-box .custom-desc {
+    max-height: 80px;
+    overflow: hidden;
+}
+
+.custom-fullscreen-preview-box .custom-desc.expanded {
+    max-height: none;
+}
+
+.read-more-link {
+    display: block;
+    margin-top: 5px;
+    color: blue;
+    cursor: pointer;
+}
+
+.read-more-link:hover {
+    text-decoration: underline;
 }
 
 .custom-shadow {
@@ -1017,38 +1045,6 @@ body.modal-open {
     .custom-gallery .custom-image {
         width: 100%;
     }
-}
-
-/* Your existing CSS styles go here */
-
-.custom-slider {
-    display: flex;
-    overflow-x: auto;
-}
-
-.custom-slider img {
-    width: 100%;
-    height: auto;
-    flex-shrink: 0;
-    margin-right: 10px;
-}
-
-.prev-btn,
-.next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    font-size: 20px;
-    z-index: 10;
-}
-
-.prev-btn {
-    left: 10px;
-}
-
-.next-btn {
-    right: 10px;
 }
 
 /* commitment page */
