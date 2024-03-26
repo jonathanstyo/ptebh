@@ -1048,6 +1048,51 @@ body.modal-open {
     }
 }
 
+/* sales */
+#product-details {
+    background-color: #F9F6EE;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#product-details h2 {
+    margin-bottom: 30px;
+}
+
+.product-description {
+    margin-bottom: 40px;
+}
+
+.advantages,
+.partner-advantages {
+    margin-bottom: 40px;
+    text-align: left;
+    padding: 0 50px 0 50px;
+}
+
+.advantages h3,
+.partner-advantages h3 {
+    margin-bottom: 20px;
+}
+
+.advantages ul,
+.partner-advantages ul {
+    padding-left: 20px;
+}
+
+.advantages li,
+.partner-advantages li {
+    margin-bottom: 10px;
+}
+
+.product-description img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
 /* commitment page */
 #commitment{
     padding: 20px 50px 20px 50px;
