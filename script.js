@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('header').appendChild(toggleBtn);
 
     function toggleNavbar() {
-        if (window.innerWidth <= 1450) {
+        if (window.innerWidth <= 1197) {
             navbar.classList.remove('active');
             toggleBtn.style.display = 'block';
         } else {

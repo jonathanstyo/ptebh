@@ -1271,7 +1271,7 @@ hr{
 }
 /* media query */
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1197px) {
     /* Adjust breakpoint as needed */
 
     #header {
