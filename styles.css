@@ -904,7 +904,6 @@ body.modal-open {
 #opr-hero {
     background-image: url("img/pit1.jpg");
     height: 40vh;
-    width: 100%;
     width: calc(100% - 60px); /* Adjust width to account for margin */
     margin: 30px 0 30px 30px;
     background-position: center;
@@ -917,19 +916,35 @@ body.modal-open {
     justify-content: center;
 }
 
-#opr-hero h2{
+#opr-hero h2 {
     padding-bottom: 5px;
     color: white;
 }
 
-#opr-hero h1{
+#opr-hero h1 {
     color: #ffffff;
     font-size: 75px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-#opr-hero p{
+#opr-hero p {
     color: white;
+}
+
+/* Responsive Design for #opr-hero */
+@media (max-width: 768px) {
+    #opr-hero {
+        padding: 0 20px;
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    #opr-hero h1 {
+        font-size: 48px; /* Adjust font size for smaller screens */
+    }
+
+    #opr-hero h2, #opr-hero p {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
 }
 
 #opr-principle {
@@ -939,10 +954,10 @@ body.modal-open {
 }
 
 .container {
-    text-align: center; 
+    text-align: center;
 }
 
-.opr-container{
+.opr-container {
     text-align: center;
     background-color: #99d075;
     border-radius: 15px;
@@ -959,7 +974,7 @@ body.modal-open {
 .dropdown-btn {
     background-color: #73BF41; /* Warna hijau untuk tombol dropdown */
     color: white;
-    width: 150vh;
+    width: 100%; /* Adjust width for responsiveness */
     padding: 20px; /* Mengatur padding agar tombol dropdown lebih panjang */
     border: none;
     border-radius: 5px;
@@ -970,7 +985,7 @@ body.modal-open {
 .dropdown-content {
     display: none;
     position: absolute;
-    width: 150vh;
+    width: fit-content; /* Adjust width for responsiveness */
     background-color: #F9F6EE;
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -990,7 +1005,7 @@ body.modal-open {
     background-color: #F9F6EE; /* Warna latar belakang hijau muda */
     padding: 80px 0;
     text-align: center;
-    color: #fff; /* Warna teks */
+    color: #000; /* Adjust text color */
 }
 
 #our-operation .container {
@@ -1004,7 +1019,8 @@ body.modal-open {
 }
 
 .operation-image {
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     border-radius: 10px; /* Tambahkan border radius */
     margin-top: 20px; /* Jarak antara gambar dan teks */
 }
@@ -1020,21 +1036,24 @@ body.modal-open {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap; /* Allow flex items to wrap */
 }
 
 .left-content {
     flex: 1;
     padding-right: 20px;
+    max-width: 650px; /* Limit max width */
 }
 
-.left-content img{
-    max-width: 650px;
+.left-content img {
+    width: 100%; /* Ensure the image fills the container */
 }
 
 .right-content {
     flex: 1;
     padding-left: 20px;
     text-align: left; /* Teks rata kiri */
+    max-width: 650px; /* Limit max width */
 }
 
 .right-content h3 {
@@ -1045,6 +1064,52 @@ body.modal-open {
 .right-content p {
     font-size: 1rem;
     line-height: 1.6;
+}
+
+/* Responsive Design for opr-principle, our-operation, and location */
+@media (max-width: 768px) {
+    #opr-principle {
+        padding: 20px;
+    }
+
+    .opr-container {
+        margin: 0 10px;
+    }
+
+    .dropdown-btn, .dropdown-content {
+        /* width: calc(100% - 20px); Adjust width for smaller screens */
+        width: fit-content;
+    }
+
+    #our-operation {
+        padding: 40px 0;
+    }
+
+    #our-operation h2 {
+        font-size: 2rem;
+    }
+
+    .operation-image {
+        width: 100%;
+    }
+
+    #location {
+        padding: 40px 0;
+    }
+
+    .peta-ctn {
+        flex-direction: column; /* Stack items vertically */
+        padding: 0 10px;
+    }
+
+    .left-content, .right-content {
+        max-width: 100%; /* Allow full width */
+        padding: 10px 0; /* Add vertical padding */
+    }
+
+    .right-content h3 {
+        font-size: 1.2rem;
+    }
 }
 
 
@@ -1137,6 +1202,11 @@ body.modal-open {
     max-width: 500px;
 }
 
+@media (max-width: 1324px) {
+    #join .join-container .join-img img{
+        width: calc(100% - 30px);
+    }
+}
 #career-content{
     display: flex;
     background-color: #F9F6EE;
@@ -1513,7 +1583,7 @@ body.modal-open {
     margin: 30px 0 30px 30px;
     width: calc(100% - 60px); /* Adjust width to account for margin */
     background-color: black;
-    height: 60vh;
+    height: auto; /* Allow height to adjust based on content */
     max-width: 100%;
     display: flex;
     align-items: center;
@@ -1524,7 +1594,9 @@ body.modal-open {
 
 .sales-ctn {
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
     align-items: center;
+    
     width: 100%;
 }
 
@@ -1532,6 +1604,7 @@ body.modal-open {
     flex: 1;
     padding: 0 30px;
     color: white;
+    min-width: 300px; /* Ensure a minimum width for content */
 }
 
 .image {
@@ -1540,6 +1613,7 @@ body.modal-open {
     background-color: #000;
     background-position: center;
     background-size: cover;
+    min-width: 300px; /* Ensure a minimum width for image */
 }
 
 #sales-section .judul {
@@ -1564,6 +1638,42 @@ body.modal-open {
     background-color: #73BF41;
     text-decoration: none;
     border-radius: 5px;
+}
+
+/* Responsive Design for #sales-section */
+@media (max-width: 1024px) {
+    #sales-section {
+        margin: 20px; /* Adjust margin for smaller screens */
+    }
+
+    .sales-ctn {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .judul {
+        margin: 10px 20px; /* Adjust margin for smaller screens */
+        padding: 0 20px; /* Adjust padding for smaller screens */
+    }
+
+    .image {
+        height: 300px; /* Set a fixed height for the image */
+        width: 100%; /* Make sure the image takes full width */
+    }
+
+    #sales-section h2 {
+        font-size: 28px; /* Adjust font size for smaller screens */
+    }
+
+    #sales-section p, #sales-section .button {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 1324px) {
+    .product-image{
+        width: calc(100% - 40px);
+    }
 }
 
 #product-details {
@@ -1606,6 +1716,18 @@ body.modal-open {
     color: #73BF41; /* Ubah warna ikon sesuai kebutuhan */
 }
 
+/* Responsive Design for #product-details and partner-advantages */
+@media (max-width: 768px) {
+    .partner-advantages {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .partner-advantages ul {
+        margin-left: 20px;
+    }
+}
+
 #contact-sales {
     background-color: #f2f2f2; /* Warna latar belakang abu-abu muda */
     padding: 80px 0;
@@ -1617,6 +1739,7 @@ body.modal-open {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap; /* Allow wrapping */
 }
 
 .left-content {
@@ -1625,7 +1748,7 @@ body.modal-open {
     padding: 15px;
     border-radius: 15px;
     padding-right: 20px;
-    margin-left: 80px;
+    margin: 20px; /* Adjust margin for better spacing */
     text-align: left; /* Teks rata kiri */
 }
 
@@ -1635,7 +1758,7 @@ body.modal-open {
 }
 
 .right-content img {
-    max-width: 600px;
+    max-width: 100%;
     border-radius: 10px; /* Border radius 10px */
 }
 
@@ -1653,6 +1776,21 @@ body.modal-open {
     margin-right: 10px; /* Ruang antara ikon dan teks */
 }
 
+/* Responsive Design for #contact-sales */
+@media (max-width: 768px) {
+    .info-ctn {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .left-content, .right-content {
+        width: 100%; /* Allow full width */
+        margin: 10px 0; /* Adjust margin for smaller screens */
+    }
+
+    .left-content {
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+    }
+}
 
 
 /* commitment page */
