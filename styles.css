@@ -209,12 +209,14 @@ body.modal-open {
     justify-content: flex-start; /* Changed to flex-start to reduce the gap */
     box-sizing: border-box;
     border-radius: 18px;
-    /* padding: 50px 80px 0 0; */
 }
 
 #hero-section .judul {
     width: 100%;
     margin: 200px 0 0 100px; /* Adjust margin as needed */
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: column;/* Enable flex wrap */
 }
 
 #hero-section h2 {
@@ -243,6 +245,7 @@ body.modal-open {
     background-color: #73BF41;
     text-decoration: none;
     border-radius: 5px;
+    max-width: fit-content;
 }
 
 #hero-section .link-boxes {
@@ -275,7 +278,7 @@ body.modal-open {
 }
 
 #hero-section .link-box-a a, 
-#hero-section .link-box-b a{
+#hero-section .link-box-b a {
     text-decoration: none;
     color: white;
 }
@@ -284,6 +287,11 @@ body.modal-open {
 @media (max-width: 768px) {
     #hero-section {
         padding: 0 20px; /* Reduce padding for smaller screens */
+    }
+
+    #hero-section .judul {
+        margin: 100px 0 0 0; /* Adjust margin for smaller screens */
+        justify-content: center; /* Center align items horizontally */
     }
 
     #hero-section h2 {
@@ -314,31 +322,30 @@ body.modal-open {
     }
 }
 
-
-/* Tambahkan gaya untuk bagian "Produk Kami" */
+/* Styles for "Produk Kami" Section */
 #produk-kami {
-    padding: 50px 0; /* Berikan ruang di atas dan bawah */
-    text-align: center; /* Tengahkan teks */
+    padding: 50px 0; /* Add spacing above and below */
+    text-align: center; /* Center-align text */
 }
 
 #produk-kami h2 {
-    margin-bottom: 30px; /* Berikan jarak bawah */
+    margin-bottom: 30px; /* Add bottom margin */
 }
 
 #produk-kami .container {
     display: flex;
-    justify-content: space-between; /* Posisikan div kiri dan kanan */
-    align-items: center; /* Atur vertikalnya di tengah */
+    justify-content: space-between; /* Position left and right divs */
+    align-items: center; /* Center vertically */
     max-width: 1200px;
-    margin: 0 auto; /* Tengahkan */
+    margin: 0 auto; /* Center align */
     background-color: #73BF41;
     padding: 35px;
     border-radius: 18px;
 }
 
 #produk-kami .left {
-    width: 45%; /* Atur lebar div kiri */
-    text-align: center; /* Atur teks ke kiri */
+    width: 45%; /* Set width of left div */
+    text-align: center; /* Align text to center */
 }
 
 #produk-kami .left p {
@@ -346,31 +353,31 @@ body.modal-open {
 }
 
 #produk-kami .left h2 {
-    margin-bottom: 20px; /* Berikan jarak bawah */
+    margin-bottom: 20px; /* Add bottom margin */
     color: white;
 }
 
 #produk-kami .left ul {
-    list-style: none; /* Hilangkan bullet points */
-    padding: 0; /* Hilangkan padding */
-    margin-bottom: 20px; /* Berikan jarak bawah */
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin-bottom: 20px; /* Add bottom margin */
     color: white;
 }
 
 #produk-kami .left ul li {
-    margin-bottom: 10px; /* Berikan jarak antar item */
+    margin-bottom: 10px; /* Add space between items */
 }
 
 #produk-kami .right {
-    width: 45%; /* Atur lebar div kanan */
+    width: 45%; /* Set width of right div */
 }
 
 #produk-kami .right img {
-    width: 100%; /* Agar gambar mengisi lebar div */
-    display: block; /* Hilangkan jarak atas dan bawah */
+    width: 100%; /* Make image fill the width of the div */
+    display: block; /* Remove top and bottom spacing */
 }
 
-/* Button kuning */
+/* Yellow Button */
 .button-yellow {
     display: inline-block;
     padding: 10px 20px;
@@ -378,83 +385,29 @@ body.modal-open {
     background-color: rgb(255, 255, 36);
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 20px; /* Berikan jarak atas */
+    margin-top: 20px; /* Add top margin */
 }
 
 .button-yellow:hover {
-    background-color: #e6e600; /* Ubah warna saat hover */
+    background-color: #e6e600; /* Change color on hover */
 }
 
-/* New Section Styles */
+/* Responsive Design for "Produk Kami" Section */
+@media (max-width: 768px) {
+    #produk-kami .container {
+        flex-direction: column; /* Stack left and right divs vertically */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
 
-#new-section {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 50px 0;
-}
+    #produk-kami .left, 
+    #produk-kami .right {
+        width: 100%; /* Set width to 100% for smaller screens */
+        margin-bottom: 20px; /* Add space between stacked divs */
+    }
 
-#new-section .left img {
-    width: 200px; /* Adjust the width as needed */
-    height: auto;
-    box-shadow: 2px 2px 4px rgb(58, 58, 58);
-}
-
-#new-section .right {
-    padding-left: 20px; /* Adjust spacing between left and right divs */
-}
-
-#new-section ul {
-    list-style: none;
-}
-
-#new-section li {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-/* New Section Styles */
-
-#new-section2 {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 50px 0;
-}
-
-#new-section2 .right img {
-    width: 200px; /* Adjust the width as needed */
-    height: auto;
-    box-shadow: 2px 2px 4px rgb(58, 58, 58);
-}
-
-#new-section2 .left {
-    padding-left: 20px; /* Adjust spacing between left and right divs */
-}
-
-#new-section2 ul {
-    list-style: none;
-}
-
-#new-section2 li {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-
-.hidden{
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 2s;
-}
-
-.show{
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
+    #produk-kami .right {
+        margin-bottom: 0; /* Remove bottom margin for the last element */
+    }
 }
 
 /* new about */
