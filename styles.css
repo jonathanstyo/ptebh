@@ -62,7 +62,7 @@ body{
 
 #navbar li{
     list-style: none;
-    padding: 0 0 0 20px;
+    padding: 0 0 0 10px;
     position: relative;
     margin: 30px;
 }
@@ -70,7 +70,7 @@ body{
 #navbar li a{
     text-decoration: none;
     position: relative;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 600px;
     color: #515151;
     transition: 0.3s ease;
@@ -94,6 +94,7 @@ a .logobendera{
 
 #navbar li a:hover:before{
     width: 100%;
+    height: 10%;
 }
 
 #header .logo{
@@ -195,68 +196,195 @@ body.modal-open {
     }
 }
 
-#about {
+#hero-section {
+    background-image: url("img/hauling-road.jpg");
     height: 100vh;
+    width: calc(100% - 60px); /* Adjust width to account for margin */
+    margin: 30px 0 30px 30px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start; /* Changed to flex-start to reduce the gap */
+    box-sizing: border-box;
+    border-radius: 18px;
+    /* padding: 50px 80px 0 0; */
+}
+
+#hero-section .judul {
+    width: 100%;
+    margin: 200px 0 0 100px; /* Adjust margin as needed */
+}
+
+#hero-section h2 {
+    margin: 0; /* Remove margin */
+    color: white;
+    font-size: 36px;
+}
+
+#hero-section h2 span {
+    color: #73BF41; /* Change color to green */
+}
+
+#hero-section h2 span.batuhitam {
+    color: rgb(44, 44, 44); /* Change color to green */
+}
+
+#hero-section p {
+    margin-bottom: 20px;
+    color: white;
+}
+
+#hero-section .button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #73BF41;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#hero-section .link-boxes {
+    display: flex;
+    width: 100%;
+    margin: 0; /* Remove margin */
+    margin-top: auto; /* Push link boxes to the bottom */
+}
+
+#hero-section .link-box-a, 
+#hero-section .link-box-b {
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    padding: 50px 20px 50px 20px;
-    /* background: linear-gradient(180deg, #73BF41, #EDF3A8); */
+    padding: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+    font-size: 18px;
+    height: 100px;
 }
 
-.slider-container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    border-radius: 100px;
-    box-shadow: 0 10px 10px rgba(0,0,0,.5);
-
+#hero-section .link-box-a {
+    border-radius: 0 0 0 18px;
 }
 
-.slide {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.5s ease;
+#hero-section .link-box-b {
+    border-radius: 0 0 18px 0;
 }
 
-.slide.active {
-    opacity: 1;
+#hero-section .link-box-a a, 
+#hero-section .link-box-b a{
+    text-decoration: none;
+    color: white;
 }
 
-.slider-controls {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+/* Responsive Design */
+@media (max-width: 768px) {
+    #hero-section {
+        padding: 0 20px; /* Reduce padding for smaller screens */
+    }
+
+    #hero-section h2 {
+        font-size: 28px; /* Adjust font size for smaller screens */
+    }
+
+    #hero-section p {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    #hero-section .button {
+        padding: 8px 16px; /* Adjust button padding for smaller screens */
+    }
+
+    #hero-section .link-boxes {
+        flex-direction: column;
+    }
+
+    #hero-section .link-box-a, 
+    #hero-section .link-box-b {
+        border-radius: 0;
+        margin-bottom: 10px;
+        height: auto;
+    }
+
+    #hero-section .link-box-b {
+        border-radius: 0 0 18px 18px;
+    }
 }
 
-.bullet {
-    width: 10px;
-    height: 10px;
-    background-color: #fff;
-    border: 1px solid gainsboro;
-    border-radius: 50%;
+
+/* Tambahkan gaya untuk bagian "Produk Kami" */
+#produk-kami {
+    padding: 50px 0; /* Berikan ruang di atas dan bawah */
+    text-align: center; /* Tengahkan teks */
+}
+
+#produk-kami h2 {
+    margin-bottom: 30px; /* Berikan jarak bawah */
+}
+
+#produk-kami .container {
+    display: flex;
+    justify-content: space-between; /* Posisikan div kiri dan kanan */
+    align-items: center; /* Atur vertikalnya di tengah */
+    max-width: 1200px;
+    margin: 0 auto; /* Tengahkan */
+    background-color: #73BF41;
+    padding: 35px;
+    border-radius: 18px;
+}
+
+#produk-kami .left {
+    width: 45%; /* Atur lebar div kiri */
+    text-align: center; /* Atur teks ke kiri */
+}
+
+#produk-kami .left p {
+    color: white;
+}
+
+#produk-kami .left h2 {
+    margin-bottom: 20px; /* Berikan jarak bawah */
+    color: white;
+}
+
+#produk-kami .left ul {
+    list-style: none; /* Hilangkan bullet points */
+    padding: 0; /* Hilangkan padding */
+    margin-bottom: 20px; /* Berikan jarak bawah */
+    color: white;
+}
+
+#produk-kami .left ul li {
+    margin-bottom: 10px; /* Berikan jarak antar item */
+}
+
+#produk-kami .right {
+    width: 45%; /* Atur lebar div kanan */
+}
+
+#produk-kami .right img {
+    width: 100%; /* Agar gambar mengisi lebar div */
+    display: block; /* Hilangkan jarak atas dan bawah */
+}
+
+/* Button kuning */
+.button-yellow {
     display: inline-block;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    color: black;
+    background-color: rgb(255, 255, 36);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px; /* Berikan jarak atas */
 }
 
-.bullet.active {
-    background-color: #1eff43;
-    box-shadow: #fff;
+.button-yellow:hover {
+    background-color: #e6e600; /* Ubah warna saat hover */
 }
 
-.content-1 {
-    padding: 50px;
-    justify-content: center;
-}
 /* New Section Styles */
 
 #new-section {
@@ -327,6 +455,120 @@ body.modal-open {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+}
+
+/* new about */
+#abt-hero {
+    background-image: url("img/pit1.jpg");
+    height: 40vh;
+    width: 100%;
+    width: calc(100% - 60px); /* Adjust width to account for margin */
+    margin: 30px 0 30px 30px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 18px;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#abt-hero h2{
+    padding-bottom: 5px;
+    color: white;
+}
+
+#abt-hero h1{
+    color: #ffffff;
+    font-size: 75px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#abt-hero p{
+    color: white;
+}
+/* CSS for vision-mission section */
+#vision-mission .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+#vision-mission .vision-img {
+    flex: 1;
+    margin-right: 50px;
+}
+
+#vision-mission .vision-img img {
+    max-width: 80%;
+    border-radius: 15px;
+
+}
+
+#vision-mission .mission-txt {
+    flex: 1;
+}
+
+#vision-mission .mission-txt h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#vision-mission .mission-txt p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+
+/* CSS for core-values section */
+#core-values .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+#core-values .core-value {
+    text-align: center;
+    flex-basis: 20%;
+}
+
+#core-values .core-value h1 {
+    font-size: 48px;
+    margin-top: 20px;
+    margin-bottom: 150px;
+}
+
+#core-values .core-value p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.diversity-bg {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: #93C572; /* Warna hijau untuk keberagaman */
+}
+
+.one-family-bg {
+    background-color: #73BF41; /* Warna hijau untuk satu keluarga */
+}
+
+.excellence-bg {
+    background-color: #93d160; /* Warna hijau untuk keunggulan */
+}
+
+.integrity-bg {
+    background-color: #73BF41; /* Warna hijau untuk integritas */
+}
+
+.teamwork-bg {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #62bd26; /* Warna hijau untuk kerja tim */
 }
 
 
@@ -650,61 +892,205 @@ body.modal-open {
     transition: 0.3s ease;
 }
 
-/* about-us/principles.html */
-
-#prinsip{
+/* operasional.html */
+#opr-hero {
+    background-image: url("img/pit1.jpg");
+    height: 40vh;
     width: 100%;
-    box-shadow: 0 10px 15px rgba(0,0,0,.3);
-    margin: 100px 0px 0px 0px;
-}
-
-#prinsip .pr-ctn{
-    width: 100%;
-    height: auto;
+    width: calc(100% - 60px); /* Adjust width to account for margin */
+    margin: 30px 0 30px 30px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 18px;
+    padding: 0 80px;
     display: flex;
-    flex-direction: row;
-    background-image: url(img/bg2.png);
-    flex-wrap: wrap;
-    justify-content: space-around;
-    /* border: 2px solid black; */
-    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
-.pr-title{
-    /* border: 2px solid red; */
-    margin: 10px;
-    padding: 100px;
+#opr-hero h2{
+    padding-bottom: 5px;
+    color: white;
 }
 
-.pr-title h2{
-    color: #fff;
+#opr-hero h1{
+    color: #ffffff;
+    font-size: 75px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.pr-title p{
-    color:#fff;
+#opr-hero p{
+    color: white;
 }
 
-.pr-title a{
-    text-decoration: none;
-    color: #FAF9F6;
-    transition: transform 0.3s ease;
-    margin-left: 10px;
+#opr-principle {
+    padding: 50px;
+    background-color: #F9F6EE; /* Warna hijau untuk latar belakang */
+    border-radius: 10px;
 }
 
-.pr-title a:hover{
-    transform: scale(1.01);
+.container {
+    text-align: center; 
+}
+
+.opr-container{
+    text-align: center;
+    background-color: #99d075;
+    border-radius: 15px;
+    margin: 0 30px 0 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.dropdown {
+    display: inline-block;
+    margin: 20px;
+}
+
+.dropdown-btn {
+    background-color: #73BF41; /* Warna hijau untuk tombol dropdown */
+    color: white;
+    width: 150vh;
+    padding: 20px; /* Mengatur padding agar tombol dropdown lebih panjang */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 150vh;
+    background-color: #F9F6EE;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content p {
+    padding: 12px;
+    margin: 0;
+}
+
+.dropdown:hover .dropdown-content {
     display: block;
 }
 
+#our-operation {
+    background-color: #F9F6EE; /* Warna latar belakang hijau muda */
+    padding: 80px 0;
+    text-align: center;
+    color: #fff; /* Warna teks */
+}
+
+#our-operation .container {
+    position: relative;
+    z-index: 1;
+}
+
+#our-operation h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.operation-image {
+    width: 1000px;
+    border-radius: 10px; /* Tambahkan border radius */
+    margin-top: 20px; /* Jarak antara gambar dan teks */
+}
+
+#location {
+    background-color: #F9F6EE; /* Warna latar belakang putih */
+    padding: 80px 0;
+    text-align: center;
+    color: #000; /* Warna teks hitam */
+}
+
+.peta-ctn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.left-content img{
+    max-width: 650px;
+}
+
+.right-content {
+    flex: 1;
+    padding-left: 20px;
+    text-align: left; /* Teks rata kiri */
+}
+
+.right-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.right-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
 
 /* career.html */
+
+#career-section {
+    height: 60vh; /* Change height to 60vh */
+    width: calc(100% - 60px); /* Adjust width to account for margin */
+    margin: 30px 0 30px 30px;
+    background-image: url("img/patok.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start; /* Changed to flex-start to reduce the gap */
+    box-sizing: border-box;
+    border-radius: 18px;
+    /* padding: 50px 80px 0 0; */
+}
+
+#career-section .judul {
+    width: 100%;
+    text-align: right;
+    margin: 100px 50px 0 0;
+}
+
+#career-section h2 {
+    margin: 0; /* Remove margin */
+    color: white;
+    font-size: 36px;
+}
+
+#career-section h2 span {
+    color: #73BF41; /* Change color to green */
+}
+
+#career-section h2 span.batuhitam {
+    color: rgb(44, 44, 44); /* Change color to green */
+}
+
+#career-section p {
+    margin-bottom: 20px;
+    color: white;
+}
+
 
 #join .join-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 100px;
-    background:linear-gradient(180deg, #73BF41, #F9F6EE);
+    background:linear-gradient(180deg, #F9F6EE,#73BF41, #F9F6EE);
     justify-content: space-evenly;
     align-items: center;
 }
@@ -752,6 +1138,68 @@ body.modal-open {
 
 
 /* gallery page */
+#about {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 50px 20px 50px 20px;
+    /* background: linear-gradient(180deg, #73BF41, #EDF3A8); */
+}
+
+.slider-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 100px;
+    box-shadow: 0 10px 10px rgba(0,0,0,.5);
+
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slider-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border: 1px solid gainsboro;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bullet.active {
+    background-color: #1eff43;
+    box-shadow: #fff;
+}
+
+.content-1 {
+    padding: 50px;
+    justify-content: center;
+}
 
 #gallery-hero {
     background-image: url("img/bg3.png");
@@ -785,6 +1233,9 @@ body.modal-open {
     padding: 40px;
 }
 
+#gallery {
+    text-align: center;
+}
 #gallery h2{
     text-align: center;
     margin-bottom: 35px;
@@ -1049,6 +1500,64 @@ body.modal-open {
 }
 
 /* sales */
+
+#sales-section {
+    margin: 30px 0 30px 30px;
+    width: calc(100% - 60px); /* Adjust width to account for margin */
+    background-color: black;
+    height: 60vh;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.sales-ctn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.judul {
+    flex: 1;
+    padding: 0 30px;
+    color: white;
+}
+
+.image {
+    flex: 1;
+    height: 100%;
+    background-color: #000;
+    background-position: center;
+    background-size: cover;
+}
+
+#sales-section .judul {
+    width: 100%;
+    margin: 10px 0 0 100px; /* Adjust margin as needed */
+}
+
+#sales-section h2 {
+    margin: 0; /* Remove margin */
+    color: white;
+    font-size: 36px;
+}
+
+#sales-section p {
+    color: white;
+}
+
+#sales-section .button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #73BF41;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
 #product-details {
     background-color: #F9F6EE;
     padding: 80px 0;
@@ -1063,35 +1572,80 @@ body.modal-open {
     margin-bottom: 40px;
 }
 
-.advantages,
 .partner-advantages {
-    margin-bottom: 40px;
-    text-align: left;
-    padding: 0 50px 0 50px;
+    margin-top: 20px;
+    background-color: #b3dcaa;
+    margin: 30px;
+    border-radius: 15px;
+    padding: 30px;
 }
 
-.advantages h3,
-.partner-advantages h3 {
-    margin-bottom: 20px;
-}
-
-.advantages ul,
 .partner-advantages ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 100px;
+}
+
+.partner-advantages li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.partner-advantages li i {
+    margin-right: 10px;
+    font-size: 24px;
+    color: #73BF41; /* Ubah warna ikon sesuai kebutuhan */
+}
+
+#contact-sales {
+    background-color: #f2f2f2; /* Warna latar belakang abu-abu muda */
+    padding: 80px 0;
+    text-align: center;
+    color: #000; /* Warna teks hitam */
+}
+
+.info-ctn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-content {
+    flex: 1;
+    background-color: #73BF41;
+    padding: 15px;
+    border-radius: 15px;
+    padding-right: 20px;
+    margin-left: 80px;
+    text-align: left; /* Teks rata kiri */
+}
+
+.right-content {
+    flex: 1;
     padding-left: 20px;
 }
 
-.advantages li,
-.partner-advantages li {
+.right-content img {
+    max-width: 600px;
+    border-radius: 10px; /* Border radius 10px */
+}
+
+.left-content h3 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-.product-description img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+.left-content p {
+    font-size: 1rem;
+    line-height: 1.6;
 }
+
+.left-content i {
+    margin-right: 10px; /* Ruang antara ikon dan teks */
+}
+
+
 
 /* commitment page */
 #commitment{
@@ -1124,15 +1678,17 @@ footer{
     width: 100%;
     position: absolute;
     bottom: 1;
-    background: linear-gradient(360deg, #93C572, #EDF3A8);
-    color: #fff;
+    background: rgba(115, 195, 72, 0.1);
+    /* background: #73C348; */
+    /* background: linear-gradient(360deg, #93C572, #EDF3A8); */
+    color: black;
     padding: 50px 0 30px;
-    border-top-left-radius: 105px ;
-    border-top-right-radius: 105px;
+    /* border-top-left-radius: 105px ; */
+    /* border-top-right-radius: 105px; */
     font-size: 13px;
     line-height: 20px;
     /* border: 2px solid black; */
-    box-shadow: 0px 5px 6px rgba(242, 255, 168, 0.5) inset;
+    /* box-shadow: 0px 5px 6px rgba(242, 255, 168, 0.5) inset; */
 }
 
 footer .row{
@@ -1150,7 +1706,7 @@ footer .row .footer-logo{
 }
 
 footer .row .col p{
-    color: #fff;
+    color: black;
 }
 
 footer .row .col ul li{
@@ -1175,7 +1731,7 @@ footer .row .col ul .contactner{
 
 footer .row .col ul li a{
     text-decoration: none;
-    color: #fff;
+    color: black;
     font-size: 15px;
 }
 
@@ -1207,8 +1763,8 @@ footer .row .col ul .icon-socmed i{
     text-align: center;
     line-height: 40px;
     font-size: 20px;
-    border: 2px solid #fff;
-    color: #fff;
+    border: 2px solid black;
+    color: black;
     background: transparent;
     margin-right: 15px;
     border-color: 10px solid black;
@@ -1217,7 +1773,7 @@ footer .row .col ul .icon-socmed i{
 
 footer .row .col ul .icon-socmed i:hover{
     color: #73BF41;
-    background-color: #fff;
+    background-color: black;
     transition: 0.3s ease;
     transform: scale(1.05);
     cursor: pointer;
@@ -1236,7 +1792,7 @@ hr{
 
 .copyright p{
     font-size: 15px;
-    color: #fff;
+    color: black;
 }
 
 .job-container{

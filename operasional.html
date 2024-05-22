@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PT Energi Batu Hitam</title>
+    <title>EBH | Sustainability</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css">
@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="icon" href="img/logokecil.png" type="image/png">
 </head>
-    
 <body>
     <!-- Navbar -->
     <section id="header">
@@ -21,7 +20,7 @@
             <ul id="navbar">
                 <!-- <li><a href="index.html" class="active">home</a></li> -->
                 <li><a href="about.html">Energi Untuk Sinergi</a></li>
-                <li><a href="operasional.html">Operasional</a></li>
+                <li><a href="operasional.html" class="active">Operasional</a></li>
                 <li><a href="sales.html">Pemasaran</a></li>
                 <li><a href="gallery.html">EBH Peduli</a></li>
                 <li><a href="career.html">Karir</a></li>
@@ -33,53 +32,57 @@
         </div>
     </section>
 
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img src="img/PERHATIAN1.png" alt="">
-        </div>
-    </div>
-
-    <section id="hero-section">
-        <div class="judul">
-            <h2>Energi masa depan,<br> <span>energi</span><span class="batuhitam">batuhitam</span></h2>
-            <p>mendukung eksplorasi dan pengembangan produksi pertambangan batu bara yang berkualitas</p>
-            <a href="sales.html" class="button">Jelajahi Produk</a> 
-        </div>
-        <div class="link-boxes">
-            <div class="link-box-a">
-                <a href="about.html">Lokasi tambang</a>
-            </div>
-            <div class="link-box-b">
-                <a href="about.html">Rantai pasok produk</a>
-            </div>
-        </div>
+    <section id="opr-hero">
+        <h2>Energi untuk sinergi</h2>
+        <p>Mendukung eksplorasi dan pengembangan produksi pertambangan batubara yang berkualitas</p>
     </section>
-
-    <!-- Section "Produk Kami" -->
-    <section id="produk-kami">
-        <h2>Produk Kami</h2>
+    
+    <section id="opr-principle">
         <div class="container">
-            <!-- Div kiri -->
-            <div class="left">
-                <h2>GAR 6500</h2>
-                <p><strong>Spesifikasi Produk:</strong></p>
-                <ul>
-                    <li>Total Moisture            20%</li>
-                    <li>Inherent Moisture         12%</li>
-                    <li>Ash Content               5%</li>
-                    <li>Total Sulfur              0.3%</li>
-                </ul>
-                <a href="#" class="button-yellow">Lihat Detail</a>
+            <h2>Prinsip Dasar Operasional</h2>
+            <p>Good Mining Practice (GMP) adalah konsep yang penting dalam industri pertambangan untuk memastikan operasi yang aman, bertanggung jawab, dan berkelanjutan. GMP mencakup perencanaan dan pengelolaan tambang dengan memperhatikan semua aspek dari hulu hingga hilir, dengan tujuan meminimalisir dampak negatif dan mengoptimalkan dampak positif.</p>
+            <div class="dropdown">
+                <button class="dropdown-btn">Kompetensi Karyawan Tambang</button>
+                <div class="dropdown-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus hendrerit euismod eros at malesuada.</p>
+                </div>
             </div>
-            <!-- Div kanan -->
-            <div class="right">
-                <img src="img/batu (2).png" alt="Gambar Batubara">
+            <div class="dropdown">
+                <button class="dropdown-btn">Pemilihan Alat yang Tepat serta Perawatan yang Terencana</button>
+                <div class="dropdown-content">
+                    <p>Pemilihan alat operasional harus sesuai dengan fungsi dan kondisi area tambang.
+                        Selain itu, perawatan alat harus terencana untuk memastikan operasi yang aman dan mengurangi dampak lingkungan.</p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn">Keselamatan dan Kesehatan Kerja (K3)</button>
+                <div class="dropdown-content">
+                    <p>PT. Energi Batu Hitam yakin bahwa dengan menjalankan komitmen ini, perusahaan dapat memberikan kontribusi positif bagi masyarakat dan lingkungan, serta membangun masa depan yang lebih berkelanjutan. </p>
+                </div>
             </div>
         </div>
     </section>
+    
+    <section id="our-operation" class="section-margin">
+        <div class="opr-container">
+            <h2>Operasional Kami</h2>
+            <img src="img/pit.jpg" alt="Operasional" class="operation-image">
+        </div>
+    </section>   
 
-
+    <section id="location" class="section-margin">
+        <div class="container">
+            <div class="peta-ctn">
+                <div class="left-content">
+                    <img src="img/peta.png" alt="Peta Lokasi Tambang">
+                </div>
+                <div class="right-content">
+                    <h3>Lokasi Tambang</h3>
+                    <p>Kalimantan Timur, Kutai Barat</p>
+                </div>
+            </div>
+        </div>
+    </section>    
     
     <footer>
         <div class="row">
@@ -95,6 +98,7 @@
                 <ul>
                     <li><a href="index.html" class="nav-foot">home</a></li>
                     <li><a href="about.html" class="nav-foot">about us</a></li>
+                    <li><a href="sustainability.html" class="nav-foot">sustainability</a></li>
                     <li><a href="gallery.html" class="nav-foot">gallery</a></li>
                     <li><a href="sales.html" class="nav-foot">sales</a></li>
                     <li><a href="career.html" class="nav-foot">career</a></li>
@@ -113,10 +117,12 @@
                 <br>
                 <ul class="icon-container">
                     <li class="icon-socmed">
-                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                        <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                        <!-- <a href="#"><i class='bx bxl-instagram-alt' ></i></a> -->
                     </li>
                     <li class="icon-socmed">
-                        <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                        <!-- <a href="#"><i class='bx bxl-linkedin' ></i></a> -->
+                        <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
                     </li>
                 </ul>
             </div>
@@ -131,4 +137,5 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+    
 </html>
