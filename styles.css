@@ -414,7 +414,6 @@ body.modal-open {
 #abt-hero {
     background-image: url("img/pit1.jpg");
     height: 40vh;
-    width: 100%;
     width: calc(100% - 60px); /* Adjust width to account for margin */
     margin: 30px 0 30px 30px;
     background-position: center;
@@ -427,37 +426,55 @@ body.modal-open {
     justify-content: center;
 }
 
-#abt-hero h2{
+#abt-hero h2 {
     padding-bottom: 5px;
     color: white;
 }
 
-#abt-hero h1{
+#abt-hero h1 {
     color: #ffffff;
     font-size: 75px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-#abt-hero p{
+#abt-hero p {
     color: white;
 }
+
+/* Responsive Design for #abt-hero */
+@media (max-width: 768px) {
+    #abt-hero {
+        padding: 0 20px;
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    #abt-hero h1 {
+        font-size: 48px; /* Adjust font size for smaller screens */
+    }
+
+    #abt-hero h2, #abt-hero p {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+}
+
 /* CSS for vision-mission section */
 #vision-mission .container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 50px;
+    flex-wrap: wrap; /* Allow flex items to wrap */
 }
 
 #vision-mission .vision-img {
     flex: 1;
     margin-right: 50px;
+    margin-bottom: 20px; /* Add bottom margin for spacing */
 }
 
 #vision-mission .vision-img img {
     max-width: 80%;
     border-radius: 15px;
-
 }
 
 #vision-mission .mission-txt {
@@ -474,7 +491,21 @@ body.modal-open {
     line-height: 1.6;
 }
 
+/* Responsive Design for vision-mission */
+@media (max-width: 768px) {
+    #vision-mission .container {
+        padding: 20px;
+        flex-direction: column;
+    }
 
+    #vision-mission .vision-img {
+        margin-right: 0;
+    }
+
+    #vision-mission .vision-img img {
+        max-width: 100%;
+    }
+}
 
 /* CSS for core-values section */
 #core-values .container {
@@ -482,11 +513,13 @@ body.modal-open {
     justify-content: space-between;
     align-items: center;
     padding: 50px;
+    flex-wrap: wrap; /* Allow flex items to wrap */
 }
 
 #core-values .core-value {
     text-align: center;
     flex-basis: 20%;
+    margin-bottom: 20px; /* Add bottom margin for spacing */
 }
 
 #core-values .core-value h1 {
@@ -522,6 +555,24 @@ body.modal-open {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: #62bd26; /* Warna hijau untuk kerja tim */
+}
+
+/* Responsive Design for core-values */
+@media (max-width: 768px) {
+    #core-values .container {
+        padding: 20px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #core-values .core-value {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+
+    #core-values .core-value h1 {
+        margin-bottom: 50px; /* Adjust margin for smaller screens */
+    }
 }
 
 
