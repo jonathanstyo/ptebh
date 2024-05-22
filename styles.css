@@ -573,6 +573,10 @@ body.modal-open {
     #core-values .core-value h1 {
         margin-bottom: 50px; /* Adjust margin for smaller screens */
     }
+
+    .diversity-bg, .teamwork-bg{
+        border-radius: 0;
+    }
 }
 
 
