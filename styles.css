@@ -162,20 +162,19 @@ a .logobendera{
     height: auto;
 }
 
-.close {
+.close-button {
     position: absolute;
-    top: -15px;
-    right: -15px;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
     cursor: pointer;
-    width: 40px; /* Set width of the close button */
-    height: 40px; /* Set height of the close button */
-    border: 1px solid #777; /* Add black border */
-    border-radius: 50%; /* Make it round */
-    background-color: white; /* Set background color to white */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px; /* Increase font size */
+    padding: 10px 20px;
+    background-color: #73BF41;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 /* Disable scrolling when modal is open */
@@ -195,6 +194,7 @@ body.modal-open {
         content: url('img/PERHATIAN.png');
     }
 }
+
 
 #hero-section {
     background-image: url("img/hauling-road.jpg");

@@ -82,7 +82,7 @@ setInterval(nextSlide, 5000); // Change slide every 5 seconds
     var modal = document.getElementById("myModal");
     
     // Get the close button
-    var closeButton = document.querySelector(".close");
+    var closeButton = document.querySelector(".close-button");
     
     // Show the modal
     modal.classList.add("show");
