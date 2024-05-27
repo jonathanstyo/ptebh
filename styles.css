@@ -1856,7 +1856,7 @@ footer .row{
 
 } 
 
-footer .row .footer-logo{
+footer .row a .footer-logo {
     width: 250px;
 }
 
