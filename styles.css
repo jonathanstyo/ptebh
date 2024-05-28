@@ -2028,12 +2028,9 @@ hr{
 /* media query */
 
 @media screen and (max-width: 1197px) {
-    /* Adjust breakpoint as needed */
-
     #header {
         padding: 20px;
     }
-
     #navbar {
         display: none;
         flex-direction: column;
@@ -2046,20 +2043,16 @@ hr{
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         z-index: 999;
     }
-
     #navbar.active {
         display: flex;
     }
-
     #navbar li {
         padding: 20px 0;
         margin: 0;
     }
-
     #navbar li a {
         font-size: 18px;
     }
-
     #header .logo {
         position: absolute;
         top: 20px;
